@@ -5,7 +5,7 @@ Kept in its own module (rather than in ``platform/__init__.py``) so that
 peers such as :mod:`lmcache.v1.platform.torch_ops` can import the
 detection primitives at the top of the file without introducing an
 import cycle -- ``platform/__init__.py`` itself pulls in
-``base_device_ops``, which in turn pulls in ``torch_ops``, so any name
+``base/device_ops``, which in turn pulls in ``torch_ops``, so any name
 that ``torch_ops`` needs from the platform package must live *outside*
 that init chain.
 
